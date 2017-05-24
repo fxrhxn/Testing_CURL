@@ -1,18 +1,14 @@
 import os
 from git import Repo
 
+## Paths where the bubble directories should be saved.
 bubblePath = os.getcwd() + '/bubbles'
-
 bubblePrivatePath = os.getcwd() + '/bubbles/bubbles_private'
 
-print bubblePath
-print bubblePrivatePath
+## Both bubble urls.
+bubble_url = 'https://github.com/bubblegroup/bubble'
+bubble_private_url = 'https://github.com/jphaas/bubble_private'
 
-
-bubble_url = 'https://github.com/fxrhxn/testing-raspberrypi'
-bubble_private_url = 'https://github.com/fxrhxn/testing-raspberrypi'
-
-repo_dir = 'Random_S'
-
+## Create the repos.
 Repo.clone_from(bubble_url, bubblePath)
 Repo.clone_from(bubble_private_url, bubblePrivatePath)
